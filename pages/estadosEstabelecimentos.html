@@ -1,0 +1,22 @@
+  	
+  	<h1  class='bg-light bg-secondary'>{{titulo}}</h1>
+	 	<ul  ng-repeat='estabelecimento in estabelecimentos' class="list-group" style="color: white">
+	 		
+	 		<li  class="list-group-item bg-secondary " >
+	 		<p>Codigo do CNES: {{estabelecimento.co_cnes}}</p>
+			<p>Codigo do IBGE: {{estabelecimento.co_ibge}}</p>
+			<p>Nome: {{estabelecimento.no_fantasia}}</p>
+			<p>Tipo de unidade: {{estabelecimento.ds_tipo_unidade}}</p>
+			<p>Tipo de gestao: {{estabelecimento.tp_gestao}}</p>
+			<p>Logradouro: {{estabelecimento.no_logradouro}}</p>
+			<p>Endereco: {{estabelecimento.nu_endereco}}</p>
+			<p>Bairro: {{estabelecimento.no_bairro}}</p>
+			<p>CEP: {{estabelecimento.co_cep}}</p>
+			<p>UF: {{estabelecimento.uf}}</p>
+			<p>Municipio: {{estabelecimento.municipio}}</p>
+			<p>Telefone: {{estabelecimento.nu_telefone}}</p>
+			</li>
+	 		<li style='background-color: white; list-style: none; height: 25px'>   </li>
+	 	
+		</ul>
+	</div>
