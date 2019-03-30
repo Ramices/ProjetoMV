@@ -1,7 +1,6 @@
 
 
-
-var app = angular.module('mv', ['ngRoute']);
+var app = angular.module('mv', ["ngRoute", "chart.js" ]);
 
 app.config(function($routeProvider){
   $routeProvider
@@ -11,8 +10,8 @@ app.config(function($routeProvider){
       
     })
   .when("/todosEstabelecimentos", {
-      templateUrl:"pages/todosEstabelecimentos.html",
-      controller: "mainController"
+  	  controller: "mainController",
+      templateUrl:"pages/todosEstabelecimentos.html"
     })
   .when("/tiposEstabelecimentos", {
   	controller: "tipoEstabelecimentoController",
@@ -21,6 +20,14 @@ app.config(function($routeProvider){
     .when("/estadosEstabelecimentos", {
   	controller: "estadosEstabelecimentoController",
     templateUrl:"pages/estadosEstabelecimentos.html"
+    })
+    .when("/tiposEstabelecimentosGrafico", {
+  	controller: "tipoEstabelecimentoController",
+    templateUrl:"pages/tiposEstabelecimentosGrafico.html"
+    })
+    .when("/estadosEstabelecimentosGrafico", {
+  	controller: "estadosEstabelecimentoController",
+    templateUrl:"pages/tiposEstabelecimentosGrafico.html"
     })
 });
 
@@ -72,24 +79,32 @@ app.factory('Estabelecimentos', function(){
 
     	}
     ] };
+
+
 });
 
 
 app.controller("mainController", function($scope, Estabelecimentos)
-{		
+{	
 	$scope.estabelecimentos = Estabelecimentos.estabelecimentos;
 	$scope.titulo = "Todos os cadastros nacionais de estabelecimentos";
+	
 });
 
 app.controller("estadosEstabelecimentoController", function($scope, Estabelecimentos)
   {		
 		$scope.titulo ="Todos os cadastros nacionais de estabelecimentos por estado";
 		$scope.estabelecimentos = Estabelecimentos.estabelecimentos;
-
+		$scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+		$scope.data = [300, 500, 100];
   });
 
 app.controller("tipoEstabelecimentoController", function($scope, Estabelecimentos)
   {		
   		$scope.estabelecimentos = Estabelecimentos.estabelecimentos;
   		$scope.titulo ="Todos os cadastros nacionais de estabelecimentos por tipo";
+		$scope.labels = ["Download Sales", "In-Store Sales", "Mail-Order Sales"];
+		$scope.data = [300, 500, 100];
+	
   });
+

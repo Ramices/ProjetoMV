@@ -1,6 +1,10 @@
   	
   	<h1  class='bg-light bg-secondary'>{{titulo}}</h1>
-	 	<ul  ng-repeat='estabelecimento in estabelecimentos' class="list-group" style="color: white">
+
+  	<a class='btn btn-primary' style="background-color: darkblue" href="#!/estadosEstabelecimentos" >Lista</a></option>	
+	<a class='btn btn-primary' style="background-color: darkblue" href="#!/estadosEstabelecimentosGrafico">Grafico</a></option>	
+	
+	 	<ul  ng-repeat='estabelecimento in estabelecimentos' class="list-group" style="color: white; margin-top: 1%">
 	 		
 	 		<li  class="list-group-item bg-secondary " >
 	 		<p>Codigo do CNES: {{estabelecimento.co_cnes}}</p>
