@@ -1,10 +1,12 @@
 package entity;
 
+import java.io.Serializable;
 
-public class EstabelecimentoNacional
+public class EstabelecimentoNacional implements Serializable
 {
 		
-	    private String CNES;
+		private static final long serialVersionUID = 1L;
+		private String CNES;
 		private String IBGE;
 	  	private String Nome;
 	  	private String tipoUnidade;
@@ -16,6 +18,41 @@ public class EstabelecimentoNacional
 	  	private String UF;
 	  	private String municipio;
 	  	private String telefone;
+	  	
+	  	public EstabelecimentoNacional()
+	  	{
+	  		this.CNES = "";
+	  		this.IBGE = "";
+	  		this.Nome = "";
+	  		this.tipoUnidade = "";
+	  		this.tipoGestao = "";
+	  		this.logradouro = "";
+	  		this.endereco = "";
+	  		this.bairro = "";
+		  	this.CEP = "";
+		  	this.UF = "";
+		  	this.municipio = "";
+		  	this.telefone = "";
+		  		
+	  	}
+ 		
+	  	
+	  	public EstabelecimentoNacional(String CNES, String IBGE, String Nome, String tipoUnidade, String tipoGestao, String logradouro, String endereco, String bairro, String CEP, String UF, String municipio, String telefone)
+	  	{
+	  		this.CNES = CNES;
+	  		this.IBGE = IBGE;
+	  		this.Nome = Nome;
+	  		this.tipoUnidade = tipoUnidade;
+	  		this.tipoGestao = tipoGestao;
+	  		this.logradouro = logradouro;
+	  		this.endereco = endereco;
+	  		this.bairro = bairro;
+		  	this.CEP = CEP;
+		  	this.UF = UF;
+		  	this.municipio = municipio;
+		  	this.telefone = telefone;
+		  		
+	  	}
  		
 	  	public String getCNES() 
 	  	{
@@ -136,5 +173,13 @@ public class EstabelecimentoNacional
 		{
 			this.telefone = telefone;
 		}
+		
+		@Override
+		public boolean equals(Object obj)
+		{
+			return CNES.equalsIgnoreCase(((EstabelecimentoNacional)obj).getCNES());
+		}
+		
+		
 
 	}

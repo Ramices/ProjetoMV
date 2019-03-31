@@ -5,7 +5,7 @@ function separarPorTipo(estabelecimentos)
 
 	for(var i = 0; i < estabelecimentos.length; ++i)
 	{
-		var tipo = estabelecimentos[i].tp_gestao;
+		var tipo = estabelecimentos[i].tipoGestao;
 
 		if(estados.includes(tipo))
 		{
@@ -24,10 +24,14 @@ function separarPorTipo(estabelecimentos)
 	return mapa;
 }
 
-app.controller("tipoEstabelecimentoController", function($scope, Estabelecimentos)
+app.controller("tipoEstabelecimentoController", function($scope, $http, Estabelecimentos)
   {		
   		$scope.titulo ="Todos os cadastros nacionais de estabelecimentos por tipo";
-  		
+  		$http.get("http://localhost:9000/api/getAll").then(function(response)
+	 	{
+	 		Estabelecimentos.estabelecimentos = response.data;
+	 		
+	 	});
 
   		$scope.mapa = separarPorTipo(Estabelecimentos.estabelecimentos);
 		$scope.mapaArray = Array.from($scope.mapa);

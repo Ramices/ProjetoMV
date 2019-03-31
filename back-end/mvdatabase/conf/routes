@@ -3,7 +3,11 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET     /                           controllers.EstabelecimentoController.index
+GET     /api/getAll                 controllers.EstabelecimentoController.getAll
+POST    /api/add                 controllers.EstabelecimentoController.addEstabelecimento
+POST    /api/update                 controllers.EstabelecimentoController.updateEstabelecimento
+POST    /api/remove/:CNES                 controllers.EstabelecimentoController.removerEstabelecimento(CNES:String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

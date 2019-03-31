@@ -26,10 +26,15 @@ function separarPorEstado(estabelecimentos)
 	return mapa;
 }
 
-app.controller("estadosEstabelecimentoController", function($scope, Estabelecimentos)
+app.controller("estadosEstabelecimentoController", function($scope, $http, Estabelecimentos)
   {		
 		$scope.titulo ="Todos os cadastros nacionais de estabelecimentos por estado";
 		
+		$http.get("http://localhost:9000/api/getAll").then(function(response)
+	 	{
+	 		Estabelecimentos.estabelecimentos = response.data;
+	 	});
+
 		$scope.mapa = separarPorEstado(Estabelecimentos.estabelecimentos);
 		$scope.mapaArray = Array.from($scope.mapa);
 
