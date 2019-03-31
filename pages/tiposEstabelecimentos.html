@@ -1,25 +1,32 @@
   	
   	<h1  class='bg-light bg-secondary'>{{titulo}}</h1>
-  
-	<a class='btn btn-primary' style="background-color: darkblue" href="#!/tiposEstabelecimentos" >Lista</a></option>	
-	<a class='btn btn-primary' style="background-color: darkblue" href="#!/tiposEstabelecimentosGrafico">Grafico</a></option>	
-	
-	<ul ng-repeat="estabelecimento in estabelecimentos" class="list-group" style="color: white; margin-top: 1%">
- 		
- 		<li  class="list-group-item bg-secondary " >
- 		<p>Codigo do CNES: {{estabelecimento.co_cnes}}</p>
-		<p>Codigo do IBGE: {{estabelecimento.co_ibge}}</p>
-		<p>Nome: {{estabelecimento.no_fantasia}}</p>
-		<p>Tipo de unidade: {{estabelecimento.ds_tipo_unidade}}</p>
-		<p>Tipo de gestao: {{estabelecimento.tp_gestao}}</p>
-		<p>Logradouro: {{estabelecimento.no_logradouro}}</p>
-		<p>Endereco: {{estabelecimento.nu_endereco}}</p>
-		<p>Bairro: {{estabelecimento.no_bairro}}</p>
-		<p>CEP: {{estabelecimento.co_cep}}</p>
-		<p>UF: {{estabelecimento.uf}}</p>
-		<p>Municipio: {{estabelecimento.municipio}}</p>
-		<p>Telefone: {{estabelecimento.nu_telefone}}</p>
-		</li>
- 		<li style='background-color: white; list-style: none; height: 25px'>   </li>
- 	
-	</ul>
+
+  		<a class='btn btn-primary' style="background-color: darkblue" href="#!/tiposEstabelecimentos">Lista</a>
+		<a class='btn btn-primary' style="background-color: darkblue" href="#!/tiposEstabelecimentosGrafico">Grafico</a>
+
+		<ul ng-repeat="elemento in mapaArray" class="list-group" style="color: white; margin-top: 5%">
+	 		
+	 		
+	 		<li  class="list-group-item bg-secondary " style='margin-bottom: 1%;'>
+	 		{{elemento[0]}}
+		 		<ul ng-repeat='estabelecimento in elemento[1]' class="list-group" style="color: white">
+		 			<li class="list-group-item bg-secondary ">
+		 				
+				 		<p>Codigo do CNES: {{estabelecimento.co_cnes}}</p>
+						<p>Codigo do IBGE: {{estabelecimento.co_ibge}}</p>
+						<p>Nome: {{estabelecimento.no_fantasia}}</p>
+						<p>Tipo de unidade: {{estabelecimento.ds_tipo_unidade}}</p>
+						<p>Tipo de gestao: {{estabelecimento.tp_gestao}}</p>
+						<p>Logradouro: {{estabelecimento.no_logradouro}}</p>
+						<p>Endereco: {{estabelecimento.nu_endereco}}</p>
+						<p>Bairro: {{estabelecimento.no_bairro}}</p>
+						<p>CEP: {{estabelecimento.co_cep}}</p>
+						<p>UF: {{estabelecimento.uf}}</p>
+						<p>Municipio: {{estabelecimento.municipio}}</p>
+						<p>Telefone: {{estabelecimento.nu_telefone}}</p>
+	 	
+
+		 			</li>
+		 		</ul>
+	 		</li>
+		</ul>
