@@ -21,7 +21,7 @@ Eclipse ( opcional)
 Quando tudo estiver instalado, seguir o passo a passo abaixo:
 
 1. Extrair o projetoMV.rar ou clonar do repositorio
-2. Ir no local em que o XAMPP está instalado e copiar a pasta projeto MV para /xampp/htdocs/ ( por  exemplo o caminho que eu uso é: C:\Users\Ramices\xampp\htdocs
+2. Ir no local em que o XAMPP está instalado e copiar a pasta projetoMV para /xampp/htdocs/ ( por  exemplo o caminho que eu uso é: C:\Users\Ramices\xampp\htdocs
 3. Abrir o Workbrench ou equivalente. Executar o script 'criar_banco.sql' disponível em projetoMV/back-end/
 4. Abrir o CMD. Digitar cd caminhoDoProjetoNoXampp/projetoMV/back-end/mvdatabase
 5. Opcionalmente, se houver algum desejo de editar o código no eclipse, digitar sbt eclipse
