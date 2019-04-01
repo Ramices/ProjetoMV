@@ -7,12 +7,12 @@ Disponível no [Github](https://github.com/Ramices/ProjetoMV)
 ### Pré Requisitos
 
 MySQL
-MySQL WorkBrench, Oracle Developer ou algum similar
-JDK 8
-SBT 1.2.8
-XAMPP
-Visual Code, Sublime ou equivalente ( opcional)
-Eclipse ( opcional)
+1.MySQL WorkBrench, Oracle Developer ou algum similar
+2.JDK 8
+3.SBT 1.2.8
+4.XAMPP
+5.Visual Code, Sublime ou equivalente ( opcional)
+6.Eclipse ( opcional)
 
 
 
