@@ -6,7 +6,7 @@ Disponível no [Github](https://github.com/Ramices/ProjetoMV)
 
 ### Pré Requisitos
 
-1 MySQL
+1. MySQL
 2. MySQL WorkBrench, Oracle Developer ou algum similar
 3. JDK 8
 4. SBT 1.2.8
