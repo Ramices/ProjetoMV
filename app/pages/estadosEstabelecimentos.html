@@ -1,0 +1,32 @@
+  	
+  	<h1  class='bg-light bg-secondary'>{{titulo}}</h1>
+
+  		<a class='btn btn-primary' style="background-color: darkblue" href="#!/estadosEstabelecimentos">Lista</a>
+		<a class='btn btn-primary' style="background-color: darkblue" href="#!/estadosEstabelecimentosGrafico">Grafico</a>
+
+		<ul ng-repeat="elemento in mapaArray" class="list-group" style="color: white; margin-top: 5%">
+	 		
+	 		
+	 		<li  class="list-group-item bg-secondary " style='margin-bottom: 1%;'>
+	 		{{elemento[0]}}
+		 		<ul ng-repeat='estabelecimento in elemento[1]' class="list-group" style="color: white">
+		 			<li class="list-group-item bg-secondary ">
+		 				
+				 		<p>Codigo do CNES: {{estabelecimento.cnes}}</p>
+						<p>Codigo do IBGE: {{estabelecimento.ibge}}</p>
+						<p>Nome: {{estabelecimento.nome}}</p>
+						<p>Tipo de unidade: {{estabelecimento.tipoUnidade}}</p>
+						<p>Tipo de gestao: {{estabelecimento.tipoGestao}}</p>
+						<p>Logradouro: {{estabelecimento.logradouro}}</p>
+						<p>Endereco: {{estabelecimento.endereco}}</p>
+						<p>Bairro: {{estabelecimento.bairro}}</p>
+						<p>CEP: {{estabelecimento.cep}}</p>
+						<p>UF: {{estabelecimento.uf}}</p>
+						<p>Municipio: {{estabelecimento.municipio}}</p>
+						<p>Telefone: {{estabelecimento.nu_telefone}}</p>
+	 	
+
+		 			</li>
+		 		</ul>
+	 		</li>
+		</ul>

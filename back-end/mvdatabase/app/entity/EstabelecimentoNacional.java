@@ -6,18 +6,19 @@ public class EstabelecimentoNacional implements Serializable
 {
 		
 		private static final long serialVersionUID = 1L;
+		
 		private String CNES;
-		private String IBGE;
-	  	private String Nome;
-	  	private String tipoUnidade;
-	  	private String tipoGestao;
-	  	private String logradouro;
-	  	private String endereco;
-	  	private String bairro;
-	  	private String CEP;
-	  	private String UF;
-	  	private String municipio;
-	  	private String telefone;
+		private String IBGE;	  	
+		private String Nome;	  	
+		private String tipoUnidade;
+		private String tipoGestao;	  	
+		private String logradouro;
+		private String endereco;	  	
+		private String bairro;
+		private String CEP;
+		private String UF;
+		private String municipio;
+		private String telefone;
 	  	
 	  	public EstabelecimentoNacional()
 	  	{

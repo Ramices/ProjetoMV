@@ -1,1 +1,0 @@
-Instalar o SBT 1.2.8 (https://www.scala-sbt.org/download.html)

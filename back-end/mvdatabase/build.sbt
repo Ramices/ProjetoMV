@@ -1,3 +1,4 @@
+import play.ebean.sbt.PlayEbean
 
 name := """mvdatabase"""
 organization := "com.mv"
@@ -19,5 +20,5 @@ libraryDependencies ++= Seq(
  javaWs,
  "org.simpleframework" % "simple-xml" % "2.7.1",
  "br.com.moip" % "java-sdk" % "4.2.0",
- "mysql" % "mysql-connector-java" % "5.1.27"
+ "mysql" % "mysql-connector-java" % "5.1.46"
 )
