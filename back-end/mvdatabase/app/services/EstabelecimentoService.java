@@ -101,10 +101,28 @@ public class EstabelecimentoService {
 	public boolean updateEstabelecimento(EstabelecimentoNacional estabelecimento) throws SQLException
 	{
 		java.sql.Connection conexao = DriverManager.getConnection(url, usuario, senha);
-		ResultSet result = conexao.prepareStatement("select CNES from databasemv.estabelecimento_nacional where CNES = " + estabelecimento.getCNES()).executeQuery();
+		ResultSet result = conexao.prepareStatement("select CNES from databasemv.estabelecimento_nacional where CNES = " + "\"" +estabelecimento.getCNES() +"\"").executeQuery();
 		 
 		if(result.next())
 		{
+			
+			conexao.prepareStatement("update databasemv.estabelecimento_nacional set "+
+			
+					"CNES = " + "\"" + estabelecimento.getCNES() +"\","+
+					"IBGE = " + "\"" + estabelecimento.getIBGE() +"\","+
+					"Nome = " + "\"" + estabelecimento.getNome() +"\","+
+					"tipoUnidade = " + "\"" + estabelecimento.getTipoUnidade() +"\","+
+					"tipoGestao = " + "\"" + estabelecimento.getTipoGestao() +"\","+
+					"logradouro = " + "\"" + estabelecimento.getLogradouro() +"\","+
+					"endereco = " + "\"" + estabelecimento.getEndereco() +"\","+
+					"bairro = " + "\"" + estabelecimento.getBairro() +"\","+
+					"CEP = " + "\"" + estabelecimento.getCEP() +"\","+
+					"UF = " + "\"" + estabelecimento.getUF() +"\","+
+					"municipi	o = " + "\"" + estabelecimento.getMunicipio() +"\","+
+					"telefone = " + "\"" + estabelecimento.getTelefone() +"\""+
+					
+					"where CNES = " + estabelecimento.getCNES()).executeUpdate();
+			
 			
 			return true;
 		}
@@ -134,6 +152,83 @@ public class EstabelecimentoService {
 	
 	}
 	
+	
+	public EstabelecimentoNacional getCNES(String CNES) throws SQLException
+	{
+		
+		java.sql.Connection conexao = DriverManager.getConnection(url, usuario, senha);
+		ResultSet result = conexao.prepareStatement("select * from databasemv.estabelecimento_nacional where CNES = " + CNES).executeQuery();
+		
+		
+		if(result.next())
+		{
+			return this.lerResultado(result);
+		}
+		
+		conexao.close();
+	
+		return null;
+	
+	}
+	
+	
+	public EstabelecimentoNacional getIBGE(String IBGE) throws SQLException
+	{
+		
+		java.sql.Connection conexao = DriverManager.getConnection(url, usuario, senha);
+		ResultSet result = conexao.prepareStatement("select * from databasemv.estabelecimento_nacional where IBGE = " + IBGE).executeQuery();
+		
+		
+		if(result.next())
+		{
+			return this.lerResultado(result);
+		}
+		
+		conexao.close();
+	
+		return null;
+	
+	}
+	
+	public ArrayList<EstabelecimentoNacional> getUF(String UF) throws SQLException
+	{
+		
+		java.sql.Connection conexao = DriverManager.getConnection(url, usuario, senha);
+		ResultSet result = conexao.prepareStatement("select * from databasemv.estabelecimento_nacional where uf = " + "\"" + UF + "\"").executeQuery();
+		
+		ArrayList<EstabelecimentoNacional> lista = new ArrayList<EstabelecimentoNacional>();
+		
+		while(result.next())
+		{
+			lista.add(lerResultado(result));
+		}
+		
+		conexao.close();
+	
+		return lista;
+	
+	}
+	
+	
+	public ArrayList<EstabelecimentoNacional> getTipo(String tipo) throws SQLException
+	{
+		
+		java.sql.Connection conexao = DriverManager.getConnection(url, usuario, senha);
+		ResultSet result = conexao.prepareStatement("select * from databasemv.estabelecimento_nacional where tipoGestao = " + "\"" +tipo +"\"").executeQuery();
+		
+		ArrayList<EstabelecimentoNacional> lista = new ArrayList<EstabelecimentoNacional>();
+		
+		while(result.next())
+		{
+			lista.add(lerResultado(result));
+		}
+		
+		conexao.close();
+	
+		return lista;
+	
+	}
+
 	
 	
 	

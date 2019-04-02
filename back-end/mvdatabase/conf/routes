@@ -8,6 +8,11 @@ GET     /api/getAll                 controllers.EstabelecimentoController.getAll
 POST    /api/add                 controllers.EstabelecimentoController.addEstabelecimento
 POST    /api/update                 controllers.EstabelecimentoController.updateEstabelecimento
 POST    /api/remove/:CNES                 controllers.EstabelecimentoController.removerEstabelecimento(CNES:String)
+GET    /api/getCNES/:CNES                 controllers.EstabelecimentoController.getCNES(CNES:String)
+GET    /api/getIBGE/:IBGE                 controllers.EstabelecimentoController.getIBGE(IBGE:String)
+GET    /api/getUF/:UF                 controllers.EstabelecimentoController.getUF(UF:String)
+GET    /api/getTipo/:tipo                 controllers.EstabelecimentoController.getTipo(tipo:String)
+
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

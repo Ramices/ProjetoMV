@@ -34,4 +34,36 @@ insert into estabelecimento_nacional values(
 
 );
 
+insert into estabelecimento_nacional values(
+	"6579744",
+	"291840",
+	"INSTITUTO VIVER DR ROBERTO",
+	"CLINICA/CENTRO DE ESPECIALIDADE",
+	"M",
+	"AVENIDA PAULO AFONSO",
+	"437",
+	" ALTO DA MARAVILHA",
+	"48904580",
+	"BA",
+	"Juazeiro",
+	""
+
+);
+
+insert into estabelecimento_nacional values(
+	"6591779",
+	"260800",
+	"SECRETARIA MUNICIPAL DE SAUDE DE JATAUBA",
+	"CENTRAL DE GESTAO EM SAUDE",
+	"M",
+	"PRACA RODOLFO GRAUSSA",
+	"S/N",
+	" CENTRO",
+	"55180000",
+	"PE",
+	"Jataúba",
+	"813746-1151"
+
+);
+
 select * from estabelecimento_nacional;

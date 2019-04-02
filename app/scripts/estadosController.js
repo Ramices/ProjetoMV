@@ -28,7 +28,7 @@ function separarPorEstado(estabelecimentos)
 
 app.controller("estadosEstabelecimentoController", function($scope, $http, Estabelecimentos)
   {		
-		$scope.titulo ="Todos os cadastros nacionais de estabelecimentos por estado";
+		$scope.titulo ="Todos os cadastros nacionais de estabelecimentos de saúde por estado";
 		
 		$http.get("http://localhost:9000/api/getAll").then(function(response)
 	 	{

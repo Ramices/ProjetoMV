@@ -26,7 +26,7 @@ function separarPorTipo(estabelecimentos)
 
 app.controller("tipoEstabelecimentoController", function($scope, $http, Estabelecimentos)
   {		
-  		$scope.titulo ="Todos os cadastros nacionais de estabelecimentos por tipo";
+  		$scope.titulo ="Todos os cadastros nacionais de estabelecimentos de saúde por tipo";
   		$http.get("http://localhost:9000/api/getAll").then(function(response)
 	 	{
 	 		Estabelecimentos.estabelecimentos = response.data;

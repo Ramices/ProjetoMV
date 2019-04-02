@@ -80,6 +80,7 @@ public class EstabelecimentoController extends Controller {
     	}
     	catch(Exception e)
     	{
+    		
     		return ok(Json.toJson(false));
     	}
     }
@@ -93,8 +94,59 @@ public class EstabelecimentoController extends Controller {
     	}
     	catch(Exception e)
     	{
-    		System.out.println(e.getMessage());
     		return ok(Json.toJson(false));
+    	}
+    }
+    
+    public Result getCNES(String CNES)
+    {
+    	
+    	try
+    	{
+    		return ok(Json.toJson(EstabelecimentoService.getService().getCNES(CNES)));
+    	}
+    	catch(Exception e)
+    	{
+    		return ok(Json.toJson(new EstabelecimentoNacional()));
+    	}
+    }
+    
+    public Result getIBGE(String IBGE)
+    {
+    	
+    	try
+    	{
+    		return ok(Json.toJson(EstabelecimentoService.getService().getIBGE(IBGE)));
+    	}
+    	catch(Exception e)
+    	{
+    		return ok(Json.toJson(new EstabelecimentoNacional()));
+    	}
+    }
+    
+    public Result getUF(String UF)
+    {
+    	
+    	try
+    	{
+    		return ok(Json.toJson(EstabelecimentoService.getService().getUF(UF)));
+    	}
+    	catch(Exception e)
+    	{
+    		return ok(Json.toJson(new ArrayList<EstabelecimentoNacional>()));
+    	}
+    }
+    
+    public Result getTipo(String tipo)
+    {
+    	
+    	try
+    	{
+    		return ok(Json.toJson(EstabelecimentoService.getService().getTipo(tipo)));
+    	}
+    	catch(Exception e)
+    	{
+    		return ok(Json.toJson(new ArrayList<EstabelecimentoNacional>()));
     	}
     }
 

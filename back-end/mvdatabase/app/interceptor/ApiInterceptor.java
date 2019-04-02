@@ -12,6 +12,8 @@ public class ApiInterceptor extends Action.Simple{
         Http.Response response = ctx.response();
         response.setHeader("Access-Control-Allow-Origin", "*");
         response.setHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
+	response.setHeader("Access-Control-Max-Age", "3600");
+ 	response.setHeader("Access-Control-Allow-Headers", "x-requested-with");
         return delegate.call(ctx); 
     }
 }
