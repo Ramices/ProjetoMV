@@ -61,7 +61,24 @@ Haverá um trecho de código comentado com alguns CNES extraídos da base de dad
 
 return { estabelecimentos: [  COLE AQUI OS OBJETOS COMENTADOS  ]  };
 
+## Informações adicionais:
 
+O projeto está dividido em duas partes:
+
+O Fron-End cuja o código fonte está disponível em ProjetoMV/app.
+O código fonte está divido em quatro partes:
+1. image-> Que contém a imagem usado na nav-bar
+2. scripts-> Que contémm os scripts dos frameworks utilizados, bem como os controladores e a factory do projeto.
+3. styles-> Contém o bootstrap e 1 estilo que foi utilizado na página
+4. pages-> As vies utilizadas nas rotas.
+
+O front-end foi desenvolvido em angularJS, com bootstrap, angular-chart e Char.js
+
+Já no back-end está disponível em ProjetoMV\back-end
+Essa pasta tem três partes:
+1. Ocript utilizado para criar e popular o banco de dados com alguns exemplos
+2. os próprios dados das CNES extraídas das fontes oficiais
+3. O código fonte do back-end, que foi desenvolvido em play-framework está. Para acessar as classes utilizadas, ir no diretório: C:\Users\Zoroastro\3D Objects\xampp\htdocs\ProjetoMV\back-end\mvdatabase\app. Para acessar as rotas que podem ser utilizadas, acessar: C:\Users\Zoroastro\3D Objects\xampp\htdocs\ProjetoMV\back-end\mvdatabase\conf\routes
 
 ## Autor
 
