@@ -26,9 +26,10 @@ Quando tudo estiver instalado, seguir o passo a passo abaixo:
 4. Abrir o CMD. Digitar cd caminhoDoProjetoNoXampp/projetoMV/back-end/mvdatabase
 5. Opcionalmente, se houver algum desejo de editar o código no eclipse, digitar sbt eclipse
 6. Digitar sbt run e esperar. O sbt irá baixar as dependências necessárias no projeto, compila-lo e executá-lo. Isso pode demorar um pouco na primeira vez que é executado
-7. Digitar em algum navegador localhost:9000 (Se tudo for bem executado, deve aparecer um pequeno "Bom dia" no navegador, indicando que o back-end está funcionando)
-8. Abrir o Xampp e clicar o botão 'start' ao lado do nome Apache
-9. Digitar no navegador localhost/projetoMV/main.html
+7. Ir em ProjetoMV/back-end/mvdatabase/app/services/EstabelecimentoService.java e trocar o usuário e senha pelo seu usuário e senha do MySQL
+8. Digitar em algum navegador localhost:9000 (Se tudo for bem executado, deve aparecer um pequeno "Bom dia" no navegador, indicando que o back-end está funcionando)
+9. Abrir o Xampp e clicar o botão 'start' ao lado do nome Apache
+10. Digitar no navegador localhost/projetoMV/main.html
 
 
 A aplicação deve estar funcionando totalmente agora. Dependendo do computador, a página pode demorar alguns segundos para carregar os dados
