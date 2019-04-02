@@ -73,9 +73,9 @@ O Fron-End cuja o código fonte está no diretório ProjetoMV/app está divido e
 
 O front-end foi desenvolvido em angularJS, com bootstrap, angular-chart e Char.js
 
-Já oo back-end, localizado no diretório ProjetoMV\back-end  tem três partes:
+Já o back-end, localizado no diretório ProjetoMV\back-end  tem três partes:
 1. O script utilizado para criar e popular o banco de dados com alguns exemplos
-2. os próprios dados das CNES extraídas das fontes oficiais
+2. Os próprios dados das CNES extraídas das fontes oficiais (DadosAbertos.txt) que não é utilizado diretamente na apliciação, mas foi utilizado para extrair dados. Como a máquina utilizada no desenvolvimento não é moderna, o desempenho tende a ser baixo. Por isso, foi evitado um volume muito grande de dados.
 3. O código fonte do back-end  que foi desenvolvido em play-framework está no diretório ProjetoMV\back-end\mvdatabase. Para acessar as classes utilizadas, ir no diretório: ProjetoMV\back-end\mvdatabase\app. Para acessar as rotas que podem ser utilizadas (tanto as que foram utilizadas nos projeto quanto alguns que não foram integrados, mas podem ser acessados via Postman), ir em: ProjetoMV\back-end\mvdatabase\conf\routes
 
 ## Autor
